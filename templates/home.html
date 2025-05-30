@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+
+{% block title %}Top Tail Groomers - Professional Pet Grooming Services{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section bg-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold">Top Tail Groomers</h1>
+                <h2 class="h3 mb-4">Professional Pet Grooming Services</h2>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="#services" class="btn btn-light btn-lg me-3">Our Services</a>
+                <a href="#contact" class="btn btn-outline-light btn-lg">Book Now</a>
+            </div>
+            <div class="col-lg-6">
+                <img src="{{ url_for('static', filename='images/Professional-Pet-Groomer-Washing-Cute-Golden-dog.jpg') }}" alt="Professional pet groomer washing a happy golden retriever" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Our Grooming Services</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 text-center">
+                    <img src="{{ url_for('static', filename='images/Professional-Pet-Groomer-Washing-and-Bathing-Relaxed-Dog.jpg') }}" alt="Dog getting a relaxing bath and shampoo treatment" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title h4">Full Service Bath</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
+                        <p class="h5 text-primary">Starting at $35</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 text-center">
+                    <img src="placeholder-grooming-service.jpg" alt="Professional pet groomer trimming dog's fur with scissors" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title h4">Complete Grooming</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
+                        <p class="h5 text-primary">Starting at $65</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 text-center">
+                    <img src="placeholder-nail-service.jpg" alt="Pet groomer carefully trimming dog's nails with professional clippers" class="card-img-top">
+                    <div class="card-body">
+                        <h3 class="card-title h4">Nail Trimming</h3>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
+                        <p class="h5 text-primary">Starting at $15</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <img src="placeholder-about-image.jpg" alt="Experienced pet groomer smiling while holding a well-groomed small dog" class="img-fluid rounded">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="display-6 fw-bold">Why Choose Top Tail Groomers?</h2>
+                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Certified Professional Groomers</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Safe and Clean Environment</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Personalized Care for Each Pet</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Flexible Scheduling Options</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center display-6 fw-bold mb-5">What Our Customers Say</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <img src="placeholder-customer1.jpg" alt="Happy customer with their freshly groomed poodle" class="rounded-circle mb-3" width="80" height="80">
+                        <blockquote class="blockquote">
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Exceptional service!"</p>
+                        </blockquote>
+                        <footer class="blockquote-footer">Sarah Johnson</footer>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <img src="placeholder-customer2.jpg" alt="Satisfied pet owner holding their groomed cat" class="rounded-circle mb-3" width="80" height="80">
+                        <blockquote class="blockquote">
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Highly recommended!"</p>
+                        </blockquote>
+                        <footer class="blockquote-footer">Mike Davis</footer>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <img src="placeholder-customer3.jpg" alt="Pet owner smiling with their well-groomed golden retriever" class="rounded-circle mb-3" width="80" height="80">
+                        <blockquote class="blockquote">
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amazing results!"</p>
+                        </blockquote>
+                        <footer class="blockquote-footer">Emily Chen</footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="bg-primary text-white py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="display-6 fw-bold mb-4">Contact Top Tail Groomers</h2>
+                <div class="mb-3">
+                    <h3 class="h5">Phone</h3>
+                    <p class="mb-0">(555) 123-4567</p>
+                </div>
+                <div class="mb-3">
+                    <h3 class="h5">Email</h3>
+                    <p class="mb-0">info@toptailgroomers.com</p>
+                </div>
+                <div class="mb-3">
+                    <h3 class="h5">Address</h3>
+                    <p class="mb-0">123 Pet Grooming Street<br>Your City, State 12345</p>
+                </div>
+                <div class="mb-3">
+                    <h3 class="h5">Hours</h3>
+                    <p class="mb-0">Monday - Saturday: 8:00 AM - 6:00 PM<br>Sunday: 10:00 AM - 4:00 PM</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="h4 mb-4">Book an Appointment</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="petName" class="form-label">Pet Name</label>
+                        <input type="text" class="form-control" id="petName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ownerName" class="form-label">Your Name</label>
+                        <input type="text" class="form-control" id="ownerName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="service" class="form-label">Service Needed</label>
+                        <select class="form-select" id="service" required>
+                            <option value="">Select a service</option>
+                            <option value="bath">Full Service Bath</option>
+                            <option value="grooming">Complete Grooming</option>
+                            <option value="nails">Nail Trimming</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Preferred Date</label>
+                        <input type="date" class="form-control" id="date" required>
+                    </div>
+                    <button type="submit" class="btn btn-light btn-lg">Book Appointment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.hero-section {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.bi {
+    font-size: 1.2rem;
+}
+</style>
+{% endblock %}
