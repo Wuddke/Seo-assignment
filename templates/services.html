@@ -1,0 +1,217 @@
+{% extends 'base.html' %}
+
+{% block title %}Our Services - Top Tail Groomers{% endblock %}
+
+{% block content %}
+<style>
+    .services-hero {
+        background: url('{{ url_for('static', filename='Images/minimalist-blue-background-with-leaves.jpg') }}') center/cover fixed;
+        min-height: 100vh;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .service-showcase {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        width: 90%;
+        text-align: center;
+        backdrop-filter: blur(10px);
+    }
+    
+    .service-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 15px;
+        margin-bottom: 1.5rem;
+        transition: all 0.3s ease;
+    }
+    
+    .service-carousel {
+        display: flex;
+        gap: 15px;
+        overflow-x: auto;
+        padding: 10px 0;
+        margin-top: 2rem;
+        scroll-behavior: smooth;
+    }
+    
+    .service-carousel::-webkit-scrollbar {
+        height: 8px;
+    }
+    
+    .service-carousel::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+    
+    .service-carousel::-webkit-scrollbar-thumb {
+        background: #007bff;
+        border-radius: 10px;
+    }
+    
+    .carousel-item {
+        flex: 0 0 auto;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 3px solid transparent;
+    }
+    
+    .carousel-item:hover {
+        transform: scale(1.05);
+        border-color: #007bff;
+    }
+    
+    .carousel-item.active {
+        border-color: #ffc107;
+        transform: scale(1.1);
+    }
+    
+    .carousel-item img {
+        width: 120px;
+        height: 80px;
+        object-fit: cover;
+        display: block;
+    }
+    
+    .service-info h2 {
+        color: #2c3e50;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+    
+    .service-price {
+        color: #007bff;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 1rem;
+    }
+    
+    .btn-book {
+        background: linear-gradient(135deg, #ffc107, #ff8c00);
+        border: none;
+        color: #fff;
+        font-weight: bold;
+        padding: 12px 30px;
+        border-radius: 25px;
+        margin-top: 1.5rem;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-book:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(255, 193, 7, 0.4);
+        color: #fff;
+    }
+</style>
+
+<section class="services-hero">
+    <div class="service-showcase">
+        <!-- Main Service Display -->
+        <div class="service-info">
+            <img id="mainServiceImage" src="{{ url_for('static', filename='images/Professional-Pet-Groomer-Washing-and-Bathing-Relaxed-Dog.jpg') }}" alt="Service Image" class="service-image">
+            <h2 id="serviceTitle">Complete Grooming Package</h2>
+            <p id="serviceDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            <div id="servicePrice" class="service-price">Starting at $65</div>
+            <button class="btn btn-book">Book This Service</button>
+        </div>
+        
+        <!-- Scrollable Service Carousel -->
+        <div class="service-carousel">
+            <div class="carousel-item active" data-service="0">
+                <img src="{{ url_for('static', filename='images/Professional-Pet-Groomer-Washing-and-Bathing-Relaxed-Dog.jpg') }}" alt="Complete Grooming">
+            </div>
+            <div class="carousel-item" data-service="1">
+                <img src="{{ url_for('static', filename='images/Pet-Groomer-trimming-pet-nails-like-a-pro.png') }}" alt="Nail Trimming">
+            </div>
+            <div class="carousel-item" data-service="2">
+                <img src="{{ url_for('static', filename='images/Professional-Pet-Groomer-Cutting-Dog-Fur.jpg') }}" alt="Hair Styling">
+            </div>
+            <div class="carousel-item" data-service="3">
+                <img src="{{ url_for('static', filename='images/Happy-customer-with-their-freshly-groomed-poodle.png') }}" alt="Dental Care">
+            </div>
+            <div class="carousel-item" data-service="4">
+                <img src="{{ url_for('static', filename='images/happy-cat-owner-holding-groomed-orange-cat.JPG') }}" alt="Cat Grooming">
+            </div>
+            <div class="carousel-item" data-service="5">
+                <img src="{{ url_for('static', filename='images/Cute-Well-groomed-golden-retriever-dog-breed.png') }}" alt="Premium Package">
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+// Service data
+const services = [
+    {
+        title: "Complete Grooming Package",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+        price: "Starting at $65",
+        image: "{{ url_for('static', filename='images/Professional-Pet-Groomer-Washing-and-Bathing-Relaxed-Dog.jpg') }}"
+    },
+    {
+        title: "Professional Nail Trimming",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
+        price: "Starting at $15",
+        image: "{{ url_for('static', filename='images/Pet-Groomer-trimming-pet-nails-like-a-pro.png') }}"
+    },
+    {
+        title: "Hair Styling & Cutting",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a vestibulum ac diam.",
+        price: "Starting at $45",
+        image: "{{ url_for('static', filename='images/Professional-Pet-Groomer-Cutting-Dog-Fur.jpg') }}"
+    },
+    {
+        title: "Dental Care Service",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames.",
+        price: "Starting at $25",
+        image: "{{ url_for('static', filename='images/Happy-customer-with-their-freshly-groomed-poodle.png') }}"
+    },
+    {
+        title: "Cat Grooming Special",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Vivamus magna justo lacinia eget.",
+        price: "Starting at $55",
+        image: "{{ url_for('static', filename='images/happy-cat-owner-holding-groomed-orange-cat.JPG') }}"
+    },
+    {
+        title: "Premium Spa Package",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.",
+        price: "Starting at $95",
+        image: "{{ url_for('static', filename='images/Cute-Well-groomed-golden-retriever-dog-breed.png') }}"
+    }
+];
+
+// Add click event listeners to carousel items
+document.querySelectorAll('.carousel-item').forEach((item, index) => {
+    item.addEventListener('click', () => {
+        // Remove active class from all items
+        document.querySelectorAll('.carousel-item').forEach(i => i.classList.remove('active'));
+        
+        // Add active class to clicked item
+        item.classList.add('active');
+        
+        // Update main service display
+        const service = services[index];
+        document.getElementById('mainServiceImage').src = service.image;
+        document.getElementById('serviceTitle').textContent = service.title;
+        document.getElementById('serviceDescription').textContent = service.description;
+        document.getElementById('servicePrice').textContent = service.price;
+        
+        // Scroll clicked item into view
+        item.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    });
+});
+
+// Auto-scroll carousel every 5 seconds
+
+{% endblock %}

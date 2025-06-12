@@ -8,9 +8,9 @@ def home():
     return render_template("home.html")
 
 
-@app.route("/about")
-def about():
-    return render_template("about.html")
+@app.route("/pet-grooming-services")
+def services():
+    return render_template("services.html")
 
 
 
