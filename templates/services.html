@@ -1,217 +1,323 @@
 {% extends 'base.html' %}
 
-{% block title %}Our Services - Top Tail Groomers{% endblock %}
+{% block title %}Pet Grooming Services - Dog & Cat Grooming, Mobile Services | Top Tail Groomers Singapore{% endblock %}
 
 {% block content %}
-<style>
-    .services-hero {
-        background: url('{{ url_for('static', filename='Images/minimalist-blue-background-with-leaves.jpg') }}') center/cover fixed;
-        min-height: 100vh;
-        width: 100vw;
-        margin-left: calc(-50vw + 50%);
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .service-showcase {
-        background: rgba(255, 255, 255, 0.95);
-        border-radius: 20px;
-        padding: 2rem;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        max-width: 500px;
-        width: 90%;
-        text-align: center;
-        backdrop-filter: blur(10px);
-    }
-    
-    .service-image {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 15px;
-        margin-bottom: 1.5rem;
-        transition: all 0.3s ease;
-    }
-    
-    .service-carousel {
-        display: flex;
-        gap: 15px;
-        overflow-x: auto;
-        padding: 10px 0;
-        margin-top: 2rem;
-        scroll-behavior: smooth;
-    }
-    
-    .service-carousel::-webkit-scrollbar {
-        height: 8px;
-    }
-    
-    .service-carousel::-webkit-scrollbar-track {
-        background: #f1f1f1;
-        border-radius: 10px;
-    }
-    
-    .service-carousel::-webkit-scrollbar-thumb {
-        background: #007bff;
-        border-radius: 10px;
-    }
-    
-    .carousel-item {
-        flex: 0 0 auto;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        border-radius: 10px;
-        overflow: hidden;
-        border: 3px solid transparent;
-    }
-    
-    .carousel-item:hover {
-        transform: scale(1.05);
-        border-color: #007bff;
-    }
-    
-    .carousel-item.active {
-        border-color: #ffc107;
-        transform: scale(1.1);
-    }
-    
-    .carousel-item img {
-        width: 120px;
-        height: 80px;
-        object-fit: cover;
-        display: block;
-    }
-    
-    .service-info h2 {
-        color: #2c3e50;
-        font-weight: bold;
-        margin-bottom: 1rem;
-    }
-    
-    .service-price {
-        color: #007bff;
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-top: 1rem;
-    }
-    
-    .btn-book {
-        background: linear-gradient(135deg, #ffc107, #ff8c00);
-        border: none;
-        color: #fff;
-        font-weight: bold;
-        padding: 12px 30px;
-        border-radius: 25px;
-        margin-top: 1.5rem;
-        transition: all 0.3s ease;
-    }
-    
-    .btn-book:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(255, 193, 7, 0.4);
-        color: #fff;
-    }
-</style>
-
-<section class="services-hero">
-    <div class="service-showcase">
-        <!-- Main Service Display -->
-        <div class="service-info">
-            <img id="mainServiceImage" src="{{ url_for('static', filename='images/Professional-Pet-Groomer-Washing-and-Bathing-Relaxed-Dog.jpg') }}" alt="Service Image" class="service-image">
-            <h2 id="serviceTitle">Complete Grooming Package</h2>
-            <p id="serviceDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-            <div id="servicePrice" class="service-price">Starting at $65</div>
-            <button class="btn btn-book">Book This Service</button>
-        </div>
-        
-        <!-- Scrollable Service Carousel -->
-        <div class="service-carousel">
-            <div class="carousel-item active" data-service="0">
-                <img src="{{ url_for('static', filename='images/Professional-Pet-Groomer-Washing-and-Bathing-Relaxed-Dog.jpg') }}" alt="Complete Grooming">
-            </div>
-            <div class="carousel-item" data-service="1">
-                <img src="{{ url_for('static', filename='images/Pet-Groomer-trimming-pet-nails-like-a-pro.png') }}" alt="Nail Trimming">
-            </div>
-            <div class="carousel-item" data-service="2">
-                <img src="{{ url_for('static', filename='images/Professional-Pet-Groomer-Cutting-Dog-Fur.jpg') }}" alt="Hair Styling">
-            </div>
-            <div class="carousel-item" data-service="3">
-                <img src="{{ url_for('static', filename='images/Happy-customer-with-their-freshly-groomed-poodle.png') }}" alt="Dental Care">
-            </div>
-            <div class="carousel-item" data-service="4">
-                <img src="{{ url_for('static', filename='images/happy-cat-owner-holding-groomed-orange-cat.JPG') }}" alt="Cat Grooming">
-            </div>
-            <div class="carousel-item" data-service="5">
-                <img src="{{ url_for('static', filename='images/Cute-Well-groomed-golden-retriever-dog-breed.png') }}" alt="Premium Package">
+<!-- Hero Section -->
+<section class="hero-section text-white py-5" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('{{ url_for('static', filename='Images/Professional-Pet-Groomer-Cutting-Dog-Fur.jpg') }}') center/cover; min-height: 60vh; display: flex; align-items: center; width: 100vw; margin-left: calc(-50vw + 50%);">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-10">
+                <h1 class="display-4 fw-bold mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Professional Pet Grooming Services in Singapore</h1>
+                <p class="lead mb-4" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">Expert cat grooming, dog grooming, and mobile pet grooming services delivered to your doorstep</p>
+                <a href="{{ url_for('contact') }}" class="btn btn-warning btn-lg fw-bold text-dark">Book Your Service Today</a>
             </div>
         </div>
     </div>
 </section>
 
-<script>
-// Service data
-const services = [
-    {
-        title: "Complete Grooming Package",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
-        price: "Starting at $65",
-        image: "{{ url_for('static', filename='images/Professional-Pet-Groomer-Washing-and-Bathing-Relaxed-Dog.jpg') }}"
-    },
-    {
-        title: "Professional Nail Trimming",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
-        price: "Starting at $15",
-        image: "{{ url_for('static', filename='images/Pet-Groomer-trimming-pet-nails-like-a-pro.png') }}"
-    },
-    {
-        title: "Hair Styling & Cutting",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a vestibulum ac diam.",
-        price: "Starting at $45",
-        image: "{{ url_for('static', filename='images/Professional-Pet-Groomer-Cutting-Dog-Fur.jpg') }}"
-    },
-    {
-        title: "Dental Care Service",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames.",
-        price: "Starting at $25",
-        image: "{{ url_for('static', filename='images/Happy-customer-with-their-freshly-groomed-poodle.png') }}"
-    },
-    {
-        title: "Cat Grooming Special",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum congue leo eget malesuada. Vivamus magna justo lacinia eget.",
-        price: "Starting at $55",
-        image: "{{ url_for('static', filename='images/happy-cat-owner-holding-groomed-orange-cat.JPG') }}"
-    },
-    {
-        title: "Premium Spa Package",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.",
-        price: "Starting at $95",
-        image: "{{ url_for('static', filename='images/Cute-Well-groomed-golden-retriever-dog-breed.png') }}"
+<!-- Services Overview -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold">Our Professional Pet Grooming Services</h2>
+            <p class="lead">Comprehensive grooming solutions for cats and dogs with mobile convenience across Singapore</p>
+        </div>
+        
+        <!-- Mobile Services Highlight -->
+        <div class="row mb-5 align-items-center">
+            <div class="col-lg-6">
+                <img src="{{ url_for('static', filename='Images/Professional-Pet-Groomer-Washing-and-Bathing-Relaxed-Dog.jpg') }}" alt="Mobile pet grooming service at customer's home" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-6">
+                <h3 class="h2 fw-bold mb-3">Mobile Pet Grooming Services</h3>
+                <p class="mb-3">Experience the convenience of professional pet grooming in the comfort of your own home. Our mobile grooming service brings our expert groomers and equipment directly to you.</p>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Mobile dog grooming across Singapore</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Mobile cat grooming in familiar environment</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Stress-free grooming experience</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Professional equipment and products</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Detailed Services Grid -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center display-6 fw-bold mb-5">Complete Grooming Solutions</h2>
+        <div class="row g-4">
+            <!-- Cat Grooming -->
+            <div class="col-lg-6">
+                <div class="card h-100 shadow-sm">
+                    <img src="{{ url_for('static', filename='Images/happy-cat-owner-holding-groomed-orange-cat.JPG') }}" alt="Professional cat grooming service showing well-groomed orange cat" class="card-img-top" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h3 class="card-title h4 text-primary">Professional Cat Grooming</h3>
+                        <p class="card-text mb-3">Specialized cat grooming services designed for feline comfort and safety. Our experienced cat groomers understand feline behavior and provide gentle, stress-free grooming.</p>
+                        <ul class="list-unstyled mb-3">
+                            <li><i class="bi bi-check text-success me-2"></i>Full cat wash and dry</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Cat fur trimming and styling</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Sanitary trimming</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Ear cleaning</li>
+                        </ul>
+                        <p class="h5 text-primary fw-bold">Starting from $45</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dog Grooming -->
+            <div class="col-lg-6">
+                <div class="card h-100 shadow-sm">
+                    <img src="{{ url_for('static', filename='Images/Cute-Well-groomed-golden-retriever-dog-breed.png') }}" alt="Professional dog grooming service showing well-groomed golden retriever" class="card-img-top" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h3 class="card-title h4 text-primary">Complete Dog Grooming</h3>
+                        <p class="card-text mb-3">Comprehensive dog grooming services for all breeds and sizes. From basic baths to full styling, our dog groomers provide professional care tailored to your pet's needs.</p>
+                        <ul class="list-unstyled mb-3">
+                            <li><i class="bi bi-check text-success me-2"></i>Full dog wash and conditioning</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Professional hair cutting and styling</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Blow drying and brushing</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Breed-specific cuts</li>
+                        </ul>
+                        <p class="h5 text-primary fw-bold">Starting from $55</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nail Clipping -->
+            <div class="col-lg-6">
+                <div class="card h-100 shadow-sm">
+                    <img src="{{ url_for('static', filename='Images/Pet-Groomer-trimming-pet-nails-like-a-pro.png') }}" alt="Professional pet nail clipping service for dogs and cats" class="card-img-top" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h3 class="card-title h4 text-primary">Dog & Cat Nail Clipping</h3>
+                        <p class="card-text mb-3">Professional nail trimming services for both dogs and cats. Our experienced groomers ensure safe and comfortable nail clipping to maintain your pet's health and prevent scratching.</p>
+                        <ul class="list-unstyled mb-3">
+                            <li><i class="bi bi-check text-success me-2"></i>Safe nail trimming technique</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Quick and stress-free process</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Suitable for anxious pets</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Regular maintenance schedules available</li>
+                        </ul>
+                        <p class="h5 text-primary fw-bold">Starting from $15</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cat/Dog Combined Grooming -->
+            <div class="col-lg-6">
+                <div class="card h-100 shadow-sm">
+                    <img src="{{ url_for('static', filename='Images/Happy-customer-with-their-freshly-groomed-poodle.png') }}" alt="Cat and dog grooming services combined package" class="card-img-top" style="height: 250px; object-fit: cover;">
+                    <div class="card-body">
+                        <h3 class="card-title h4 text-primary">Cat/Dog Grooming Packages</h3>
+                        <p class="card-text mb-3">Convenient grooming packages for multi-pet households. Save time and money with our combined cat and dog grooming services performed during the same visit.</p>
+                        <ul class="list-unstyled mb-3">
+                            <li><i class="bi bi-check text-success me-2"></i>Multi-pet household discounts</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Same-day service for all pets</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Customized grooming plans</li>
+                            <li><i class="bi bi-check text-success me-2"></i>Family pet care packages</li>
+                        </ul>
+                        <p class="h5 text-primary fw-bold">Package deals available</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Specialized Services -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center display-6 fw-bold mb-5">Specialized Grooming Services</h2>
+        <div class="row g-4">
+            <!-- Dematting Service -->
+            <div class="col-lg-4">
+                <div class="text-center p-4 border rounded shadow-sm h-100">
+                    <div class="mb-3">
+                        <i class="bi bi-scissors" style="font-size: 3rem; color: #007bff;"></i>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">Professional Dematting</h3>
+                    <p class="mb-3">Expert dematting services for severely matted fur. Our gentle techniques safely remove mats without causing discomfort to your pet.</p>
+                    <ul class="list-unstyled text-start">
+                        <li><i class="bi bi-check text-success me-2"></i>Safe mat removal techniques</li>
+                        <li><i class="bi bi-check text-success me-2"></i>Prevents skin irritation</li>
+                        <li><i class="bi bi-check text-success me-2"></i>Conditioning treatments included</li>
+                    </ul>
+                    <p class="h5 text-primary fw-bold mt-3">From $25 (additional to grooming)</p>
+                </div>
+            </div>
+
+            <!-- Mobile Dog Grooming -->
+            <div class="col-lg-4">
+                <div class="text-center p-4 border rounded shadow-sm h-100">
+                    <div class="mb-3">
+                        <i class="bi bi-truck" style="font-size: 3rem; color: #007bff;"></i>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">Mobile Dog Grooming</h3>
+                    <p class="mb-3">Professional dog grooming services that come to your location. Perfect for busy pet owners and anxious dogs who prefer familiar surroundings.</p>
+                    <ul class="list-unstyled text-start">
+                        <li><i class="bi bi-check text-success me-2"></i>Island-wide Singapore coverage</li>
+                        <li><i class="bi bi-check text-success me-2"></i>Fully equipped mobile unit</li>
+                        <li><i class="bi bi-check text-success me-2"></i>Flexible scheduling</li>
+                    </ul>
+                    <p class="h5 text-primary fw-bold mt-3">Convenience fee applies</p>
+                </div>
+            </div>
+
+            <!-- Mobile Cat Grooming -->
+            <div class="col-lg-4">
+                <div class="text-center p-4 border rounded shadow-sm h-100">
+                    <div class="mb-3">
+                        <i class="bi bi-house-door" style="font-size: 3rem; color: #007bff;"></i>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">Mobile Cat Grooming</h3>
+                    <p class="mb-3">Specialized mobile cat grooming services. Reduce stress for your feline friend with professional grooming in their comfortable home environment.</p>
+                    <ul class="list-unstyled text-start">
+                        <li><i class="bi bi-check text-success me-2"></i>Stress-free environment</li>
+                        <li><i class="bi bi-check text-success me-2"></i>Cat behavior specialists</li>
+                        <li><i class="bi bi-check text-success me-2"></i>Gentle handling techniques</li>
+                    </ul>
+                    <p class="h5 text-primary fw-bold mt-3">Premium mobile service</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Areas -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold">Service Areas in Singapore</h2>
+            <p class="lead">We provide mobile pet grooming services across Singapore</p>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-6 mb-3">
+                <h4 class="h5 fw-bold">Central Singapore</h4>
+                <p>Orchard, Marina Bay, Raffles Place, Clarke Quay</p>
+            </div>
+            <div class="col-md-6 mb-3">
+                <h4 class="h5 fw-bold">East Singapore</h4>
+                <p>Bedok, Tampines, Pasir Ris, Changi</p>
+            </div>
+            <div class="col-md-6 mb-3">
+                <h4 class="h5 fw-bold">West Singapore</h4>
+                <p>Jurong, Clementi, Bukit Batok, Choa Chu Kang</p>
+            </div>
+            <div class="col-md-6 mb-3">
+                <h4 class="h5 fw-bold">North Singapore</h4>
+                <p>Woodlands, Yishun, Ang Mo Kio, Bishan</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5 text-white" style="background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); width: 100vw; margin-left: calc(-50vw + 50%);">
+    <div class="container text-center">
+        <h2 class="display-5 fw-bold mb-4">Ready to Book Your Pet Grooming Service?</h2>
+        <p class="lead mb-4">Contact us today to schedule professional cat grooming, dog grooming, or mobile pet grooming services</p>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <a href="{{ url_for('contact') }}" class="btn btn-warning btn-lg me-3 mb-2">Contact Us Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    body {
+        overflow-x: hidden;
+        max-width: 100%;
     }
-];
+    
+    .bi {
+        font-family: 'bootstrap-icons' !important;
+    }
+    
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    
+    .btn {
+        transition: all 0.3s ease;
+    }
+    
+    .btn:hover {
+        transform: translateY(-2px);
+    }
+    
+    /* SEO-friendly structured data would be added via JSON-LD in the head */
+</style>
 
-// Add click event listeners to carousel items
-document.querySelectorAll('.carousel-item').forEach((item, index) => {
-    item.addEventListener('click', () => {
-        // Remove active class from all items
-        document.querySelectorAll('.carousel-item').forEach(i => i.classList.remove('active'));
-        
-        // Add active class to clicked item
-        item.classList.add('active');
-        
-        // Update main service display
-        const service = services[index];
-        document.getElementById('mainServiceImage').src = service.image;
-        document.getElementById('serviceTitle').textContent = service.title;
-        document.getElementById('serviceDescription').textContent = service.description;
-        document.getElementById('servicePrice').textContent = service.price;
-        
-        // Scroll clicked item into view
-        item.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-    });
-});
-
-// Auto-scroll carousel every 5 seconds
-
+<!-- SEO Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Top Tail Groomers",
+  "description": "Professional pet grooming services including cat grooming, dog grooming, mobile grooming, nail clipping, and dematting services in Singapore",
+  "url": "{{ request.url }}",
+  "telephone": "+65-XXXX-XXXX",
+  "email": "hello@TopTailgroomer.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "SG",
+    "addressLocality": "Singapore"
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "name": "Singapore"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Pet Grooming Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Cat Grooming",
+          "description": "Professional cat grooming services"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Dog Grooming",
+          "description": "Complete dog grooming services"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobile Pet Grooming",
+          "description": "Mobile grooming services at your location"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pet Nail Clipping",
+          "description": "Professional nail trimming for cats and dogs"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Dematting Service",
+          "description": "Professional dematting for matted pet fur"
+        }
+      }
+    ]
+  }
+}
+</script>
 {% endblock %}

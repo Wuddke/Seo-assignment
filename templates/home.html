@@ -57,6 +57,9 @@
                 </div>
             </div>
         </div>
+        <div class="text-center mt-5">
+            <a href="{{ url_for('services') }}" class="btn btn-primary btn-lg">View All Services</a>
+        </div>
     </div>
 </section>
 
@@ -149,7 +152,7 @@
             
             <div class="col-lg-6 text-center">
                 <!-- Large paw print icon -->
-                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Large Paw Print" class="img-fluid" style="max-width: 100%; height: auto;">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo ford dog groomer cat groomer service" class="img-fluid" style="max-width: 100%; height: auto;">
             </div>
         </div>
     </div>
@@ -174,7 +177,8 @@
             <div class="col-lg-3 col-md-6">
                 <div class="contact-card h-100">
                     <h3 class="h5 fw-bold mb-3">Address</h3>
-                    <a href="#" class="btn btn-light px-4 py-2 rounded-pill text-primary fw-semibold">VIEW LOCATIONS</a>
+                    Nanyang Polytechnic<br>
+                    180 Ang Mo Kio Ave 8, Singapore 569830<br>
                 </div>
             </div>
             
@@ -209,6 +213,10 @@
 </section>
 
 <style>
+    body {
+        overflow-x: hidden;
+        max-width: 100%;
+    }
 
     .hero-section {
         background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
