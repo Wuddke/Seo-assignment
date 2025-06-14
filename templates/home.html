@@ -1,18 +1,32 @@
 {% extends 'base.html' %}
 
-{% block title %}Top Tail Groomers - Professional Pet Grooming Services{% endblock %}
+{% block title %}Dog Groomer & Cat Groomer Near Me - Mobile Pet Grooming Ang Mo Kio Singapore | Top Tail Groomers{% endblock %}
+
+{% block meta_description %}Professional dog grooming and cat grooming services near me in Ang Mo Kio Singapore. Expert mobile pet grooming, dog nail clipping, cat nail clipping, and dematting services. Book your pet groomer today!{% endblock %}
 
 {% block content %}
+<!-- Breadcrumb Navigation for SEO -->
+<nav aria-label="breadcrumb" class="d-none">
+    <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ url_for('home') }}">
+                <span itemprop="name">Home</span>
+            </a>
+            <meta itemprop="position" content="1" />
+        </li>
+    </ol>
+</nav>
+
 <!-- Hero Section -->
 <section class="hero-section text-white py-5" style="background: url('{{ url_for('static', filename='Images/minimalist-blue-background-with-leaves.jpg') }}') center/cover fixed; min-height: 100vh; display: flex; align-items: center; width: 100vw; margin-left: calc(-50vw + 50%); position: relative;">
     <div class="container position-relative" style="z-index: 2;">
         <div class="row justify-content-center text-center">
             <div class="col-lg-8">
-                <h1 class="display-4 fw-bold" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Top Tail Groomers</h1>
-                <h2 class="h3 mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Professional Pet Grooming Services</h2>
-                <p class="lead" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <a href="{{ url_for('services') }}" class="btn btn-light btn-lg me-3">Our Services</a>
-                <a href="#contact" class="btn btn-warning btn-lg fw-bold text-dark shadow-lg pulse-animation">Book Now</a>
+                <h1 class="display-4 fw-bold" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Professional Dog Groomer & Cat Groomer Near Me</h1>
+                <h2 class="h3 mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Mobile Pet Grooming Services in Ang Mo Kio Singapore</h2>
+                <p class="lead" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">Expert dog grooming, cat grooming, nail clipping, and dematting services delivered to your doorstep. Professional pet groomer services for Singapore residents.</p>
+                <a href="{{ url_for('services') }}" class="btn btn-light btn-lg me-3">Our Pet Grooming Services</a>
+                <a href="#contact" class="btn btn-warning btn-lg fw-bold text-dark shadow-lg pulse-animation">Book Mobile Pet Grooming</a>
             </div>
         </div>
     </div>
@@ -22,43 +36,43 @@
 <section id="services" class="py-5">
     <div class="container">
         <div class="text-center mb-5">
-            <h2 class="display-5 fw-bold">Our Grooming Services</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h2 class="display-5 fw-bold">Professional Pet Grooming Services Near Me</h2>
+            <p class="lead">Expert dog grooming, cat grooming, mobile pet grooming, and nail clipping services in Ang Mo Kio Singapore</p>
         </div>
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="card h-100 text-center">
-                    <img src="{{ url_for('static', filename='Images/Professional-Pet-Groomer-Washing-and-Bathing-Relaxed-Dog.jpg') }}" alt="Dog getting a relaxing bath and shampoo treatment" class="card-img-top">
+                    <img src="{{ url_for('static', filename='Images/Professional-Pet-Groomer-Washing-and-Bathing-Relaxed-Dog.jpg') }}" alt="Professional dog groomer washing and bathing relaxed dog in Ang Mo Kio" class="card-img-top">
                     <div class="card-body">
-                        <h3 class="card-title h4">Full Service Bath</h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
+                        <h3 class="card-title h4">Dog Grooming & Bath Service</h3>
+                        <p class="card-text">Complete dog grooming service including professional washing, shampooing, and conditioning. Our dog groomer experts provide gentle care for your pets near Ang Mo Kio Singapore.</p>
                         <p class="h5 text-primary">Starting at $35</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card h-100 text-center">
-                    <img src="{{ url_for('static', filename='Images/Professional-Pet-Groomer-Cutting-Dog-Fur.jpg') }}" alt="Professional pet groomer trimming dog's fur with scissors" class="card-img-top">
+                    <img src="{{ url_for('static', filename='Images/Professional-Pet-Groomer-Cutting-Dog-Fur.jpg') }}" alt="Professional pet groomer cutting and styling dog fur" class="card-img-top">
                     <div class="card-body">
-                        <h3 class="card-title h4">Complete Grooming</h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
+                        <h3 class="card-title h4">Mobile Pet Grooming</h3>
+                        <p class="card-text">Convenient mobile dog grooming and mobile cat grooming services delivered to your home. Professional pet groomer comes to you in Ang Mo Kio and surrounding areas.</p>
                         <p class="h5 text-primary">Starting at $65</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card h-100 text-center">
-                    <img src="{{ url_for('static', filename='Images/Pet-Groomer-trimming-pet-nails-like-a-pro.png') }}" alt="Pet groomer carefully trimming dog's nails with professional clippers" class="card-img-top">
+                    <img src="{{ url_for('static', filename='Images/Pet-Groomer-trimming-pet-nails-like-a-pro.png') }}" alt="Pet groomer providing professional dog nail clipping and cat nail clipping service" class="card-img-top">
                     <div class="card-body">
-                        <h3 class="card-title h4">Nail Trimming</h3>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam.</p>
+                        <h3 class="card-title h4">Dog & Cat Nail Clipping</h3>
+                        <p class="card-text">Professional dog nail clipping and cat nail clipping services. Safe and stress-free nail trimming by experienced pet groomer specialists near you.</p>
                         <p class="h5 text-primary">Starting at $15</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="text-center mt-5">
-            <a href="{{ url_for('services') }}" class="btn btn-primary btn-lg">View All Services</a>
+            <a href="{{ url_for('services') }}" class="btn btn-primary btn-lg">View All Pet Grooming Services</a>
         </div>
     </div>
 </section>
@@ -69,15 +83,14 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <img src="{{ url_for('static', filename='Images/trimming-pet-nails-like-a-pro.png') }}" alt="Experienced pet groomer smiling while holding a well-groomed small dog" class="img-fluid rounded">
-            </div>
-            <div class="col-lg-6">
-                <h2 class="display-6 fw-bold">Why Choose Top Tail Groomers?</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>            <div class="col-lg-6">
+                <h2 class="display-6 fw-bold">Why Choose Our Pet Groomer Services Near Me?</h2>
+                <p class="lead">Top Tail Groomers offers professional dog grooming, cat grooming, mobile pet grooming, and dematting services in Ang Mo Kio Singapore. We are your trusted pet groomer for comprehensive grooming solutions.</p>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Certified Professional Groomers</li>
-                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Safe and Clean Environment</li>
-                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Personalized Care for Each Pet</li>
-                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Flexible Scheduling Options</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Certified Professional Dog & Cat Groomer</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Mobile Dog Grooming & Mobile Cat Grooming Services</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Expert Dog Nail Clipping & Cat Nail Clipping</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Professional Dematting Services Available</li>
                 </ul>
             </div>
         </div>
@@ -91,10 +104,9 @@
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="card h-100">
-                    <img src="{{ url_for('static', filename='Images/Happy-customer-with-their-freshly-groomed-poodle.png') }}" alt="Happy customer with their freshly groomed poodle" class="card-img-top" style="height: 500px; width: 100%; object-fit: cover;">
-                    <div class="card-body text-center">
+                    <img src="{{ url_for('static', filename='Images/Happy-customer-with-their-freshly-groomed-poodle.png') }}" alt="Happy customer with their freshly groomed poodle" class="card-img-top" style="height: 500px; width: 100%; object-fit: cover;">                    <div class="card-body text-center">
                         <blockquote class="blockquote">
-                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Exceptional service!"</p>
+                            <p>"Excellent dog grooming service! My golden retriever looks amazing after visiting Top Tail Groomers in Ang Mo Kio. Highly recommend their mobile pet grooming!"</p>
                         </blockquote>
                         <footer class="blockquote-footer">Sarah Johnson</footer>
                     </div>
@@ -102,10 +114,10 @@
             </div>
             <div class="col-md-4">
                 <div class="card h-100">
-                    <img src="{{ url_for('static', filename='Images/happy-cat-owner-holding-groomed-orange-cat.JPG') }}" alt="Satisfied pet owner holding their groomed cat" class="card-img-top" style="height: 500px; width: 100%; object-fit: cover;">
+                    <img src="{{ url_for('static', filename='Images/Pet-Groomer-trimming-pet-nails-like-a-pro.png') }}" alt="Satisfied pet owner holding their groomed cat" class="card-img-top" style="height: 500px; width: 100%; object-fit: cover;">
                     <div class="card-body text-center">
                         <blockquote class="blockquote">
-                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Highly recommended!"</p>
+                            <p>"Best cat groomer near me! Professional cat nail clipping and grooming services. My cat loves their gentle approach to pet grooming."</p>
                         </blockquote>
                         <footer class="blockquote-footer">Lisa Wong</footer>
                     </div>
@@ -116,7 +128,7 @@
                     <img src="{{ url_for('static', filename='Images/Cute-Well-groomed-golden-retriever-dog-breed.png') }}" alt="Pet owner smiling with their well-groomed golden retriever" class="card-img-top" style="height: 500px; width: 100%; object-fit: cover;">
                     <div class="card-body text-center">
                         <blockquote class="blockquote">
-                            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amazing results!"</p>
+                            <p>"Amazing mobile dog grooming service! They came to my home in Ang Mo Kio and provided excellent dematting services. Professional pet groomer team!"</p>
                         </blockquote>
                         <footer class="blockquote-footer">Emily Chen</footer>
                     </div>
@@ -157,6 +169,138 @@
         </div>
     </div>
 </section>
+
+<!-- Pet Grooming Near Me Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold">Pet Grooming Ang Mo Kio & Nearby Areas</h2>
+            <p class="lead">Searching for "pet grooming near me"? Our mobile dog grooming and mobile cat grooming services cover Ang Mo Kio Singapore and surrounding locations.</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="card border-primary h-100">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="h4 mb-0">Mobile Dog Grooming Services</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="mb-3">Our professional dog groomer specialists provide comprehensive mobile dog grooming services throughout Ang Mo Kio Singapore. We bring our fully equipped mobile grooming unit directly to your location.</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Complete dog grooming at your doorstep</li>
+                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Professional dog nail clipping services</li>
+                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Expert dematting for matted fur</li>
+                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Stress-free environment for anxious dogs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="card border-success h-100">
+                    <div class="card-header bg-success text-white">
+                        <h3 class="h4 mb-0">Mobile Cat Grooming Services</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="mb-3">Finding a reliable cat groomer near me? Our mobile cat grooming services are perfect for feline friends who prefer the comfort of their own home environment in Ang Mo Kio Singapore.</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Gentle cat grooming by specialists</li>
+                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Safe cat nail clipping techniques</li>
+                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Professional dematting services</li>
+                            <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Familiar home environment grooming</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <h3 class="h4 fw-bold mb-3">Looking for Pet Groomer Near Me in These Areas?</h3>
+            <div class="row">
+                <div class="col-md-3 mb-2">
+                    <span class="badge bg-light text-dark p-2">Ang Mo Kio Pet Grooming</span>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <span class="badge bg-light text-dark p-2">Yishun Dog Groomer</span>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <span class="badge bg-light text-dark p-2">Bishan Cat Groomer</span>
+                </div>
+                <div class="col-md-3 mb-2">
+                    <span class="badge bg-light text-dark p-2">Toa Payoh Mobile Grooming</span>
+                </div>
+            </div>        </div>
+    </div>
+</section>
+
+<!-- FAQ Section for SEO -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold">Frequently Asked Questions</h2>
+            <p class="lead">Common questions about our dog grooming, cat grooming, and mobile pet grooming services in Ang Mo Kio Singapore</p>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq1">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                                Do you provide mobile dog grooming and mobile cat grooming services near me?
+                            </button>
+                        </h3>
+                        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes! We provide mobile dog grooming and mobile cat grooming services throughout Ang Mo Kio Singapore and surrounding areas. Our fully equipped mobile unit comes directly to your location for convenient pet grooming services.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                                What dog grooming and cat grooming services do you offer?
+                            </button>
+                        </h3>
+                        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We offer comprehensive dog grooming and cat grooming services including full baths, hair cutting, dog nail clipping, cat nail clipping, dematting, and specialized mobile pet grooming. All services are performed by certified pet groomers.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                                Do you provide dog nail clipping and cat nail clipping services?
+                            </button>
+                        </h3>
+                        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Absolutely! Our professional pet groomers provide safe dog nail clipping and cat nail clipping services. We use proper techniques to ensure your pet's comfort during the nail trimming process.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq4">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                                What is dematting and do you offer this service?
+                            </button>
+                        </h3>
+                        <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Dematting is the process of safely removing mats and tangles from your pet's fur. Yes, we offer professional dematting services as part of our comprehensive pet grooming solutions for both dogs and cats.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Contact Section -->
 <section id="contact" class="text-white py-5" style="background: linear-gradient(135deg, #87CEEB 0%, #4682B4 100%); position: relative; overflow: hidden; width: 100vw; margin-left: calc(-50vw + 50%);">
     <!-- Background decorative elements -->
@@ -251,5 +395,154 @@
         box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
     
+    .accordion-button:not(.collapsed) {
+        background-color: #e7f3ff;
+        color: #0066cc;
+    }
+    
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+    
+    /* Optimize images for performance */
+    img {
+        max-width: 100%;
+        height: auto;
+        loading: lazy;
+    }
+    
 </style>
+
+<!-- SEO Schema Markup for Local Business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Top Tail Groomers",
+  "description": "Professional dog grooming, cat grooming, mobile pet grooming, dog nail clipping, cat nail clipping, and dematting services in Ang Mo Kio Singapore",
+  "url": "{{ request.url_root }}",
+  "telephone": "+65-XXXX-XXXX",
+  "email": "hello@TopTailgroomer.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "180 Ang Mo Kio Ave 8, Nanyang Polytechnic",
+    "addressLocality": "Ang Mo Kio",
+    "addressRegion": "Singapore",
+    "postalCode": "569830",
+    "addressCountry": "SG"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 1.3784,
+    "longitude": 103.8492
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "name": "Singapore Pet Grooming Service Area",
+    "description": "Dog grooming and cat grooming services covering Ang Mo Kio and nearby areas"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Pet Grooming Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Dog Grooming",
+          "description": "Professional dog grooming services including washing, cutting, and styling"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Cat Grooming",
+          "description": "Expert cat grooming services with gentle handling"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobile Pet Grooming",
+          "description": "Mobile dog grooming and mobile cat grooming services at your location"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Dog Nail Clipping",
+          "description": "Professional dog nail clipping services"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Cat Nail Clipping",
+          "description": "Safe cat nail clipping by experienced pet groomers"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Dematting",
+          "description": "Professional dematting services for matted pet fur"
+        }
+      }
+    ]
+  },  "priceRange": "$15-$65",
+  "openingHours": "Mo-Su 09:00-19:00"
+}
+</script>
+
+<!-- FAQ Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you provide mobile dog grooming and mobile cat grooming services near me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! We provide mobile dog grooming and mobile cat grooming services throughout Ang Mo Kio Singapore and surrounding areas. Our fully equipped mobile unit comes directly to your location for convenient pet grooming services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What dog grooming and cat grooming services do you offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer comprehensive dog grooming and cat grooming services including full baths, hair cutting, dog nail clipping, cat nail clipping, dematting, and specialized mobile pet grooming. All services are performed by certified pet groomers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you provide dog nail clipping and cat nail clipping services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely! Our professional pet groomers provide safe dog nail clipping and cat nail clipping services. We use proper techniques to ensure your pet's comfort during the nail trimming process."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is dematting and do you offer this service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dematting is the process of safely removing mats and tangles from your pet's fur. Yes, we offer professional dematting services as part of our comprehensive pet grooming solutions for both dogs and cats."
+      }
+    }
+  ]
+}
+</script>
 {% endblock %}

@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Allow all web crawlers access to all content
+
+Sitemap: https://seo-assignment.onrender.com/sitemap.xml
+
+# Important pages for SEO
+Allow: /
+Allow: /services
+Allow: /pet-grooming-services
+Allow: /contact
+Allow: /contact-us
+
+# Static files
+Allow: /static/
