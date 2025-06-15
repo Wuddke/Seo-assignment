@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 
-{% block title %}Contact Pet Grooming Services Near Me - Book Now | Top Tail Groomers Nanyang Polytechnic Singapore{% endblock %}
+{% block title %}Contact Pet Grooming Singapore | Book Now{% endblock %}
+
+{% block meta_description %}Contact Top Tail Groomers for professional pet grooming services in Singapore. Book cat grooming, dog grooming, and mobile services near Nanyang Polytechnic.{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
@@ -8,8 +10,8 @@
     <div class="container">
         <div class="row justify-content-center text-center">
             <div class="col-lg-10">
-                <h1 class="display-4 fw-bold mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Contact Pet Grooming Services Near Me</h1>
-                <p class="lead mb-4" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">Book professional cat and dog grooming services at Nanyang Polytechnic Singapore and surrounding areas</p>
+                <h1 class="display-4 fw-bold mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">Contact Pet Grooming Singapore</h1>
+                <p class="lead mb-4" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">Book professional cat and dog grooming services at Nanyang Polytechnic Singapore and surrounding areas. <a href="{{ url_for('services') }}" class="text-white text-decoration-underline">View our complete services</a> or <a href="{{ url_for('home') }}" class="text-white text-decoration-underline">learn more about our approach</a>.</p>
                 <a href="#booking-form" class="btn btn-warning btn-lg fw-bold text-dark">Book Your Service Now</a>
             </div>
         </div>
@@ -29,14 +31,14 @@
             <div class="col-lg-6">
                 <div class="card h-100 border-primary">
                     <div class="card-header bg-primary text-white">
-                        <h3 class="card-title h4 mb-0"><i class="bi bi-geo-alt-fill me-2"></i>Primary Location</h3>
+                        <p class="h4 mb-0"><i class="bi bi-geo-alt-fill me-2"></i>Primary Location</p>
                     </div>
                     <div class="card-body">
-                        <h4 class="h5 fw-bold text-primary">Nanyang Polytechnic Singapore</h4>
+                        <p class="h5 fw-bold text-primary">Nanyang Polytechnic Singapore</p>
                         <p class="mb-3"><i class="bi bi-map me-2"></i>180 Ang Mo Kio Ave 8, Singapore 569830</p>
                         
                         <div class="mb-4">
-                            <h5 class="h6 fw-bold">Areas We Serve From This Location:</h5>
+                            <p class="fw-bold">Areas We Serve From This Location:</p>
                             <ul class="list-unstyled row">
                                 <li class="col-6 mb-1"><i class="bi bi-check-circle text-success me-2"></i>Jurong West</li>
                                 <li class="col-6 mb-1"><i class="bi bi-check-circle text-success me-2"></i>Choa Chu Kang</li>
@@ -47,6 +49,7 @@
                                 <li class="col-6 mb-1"><i class="bi bi-check-circle text-success me-2"></i>Woodlands</li>
                                 <li class="col-6 mb-1"><i class="bi bi-check-circle text-success me-2"></i>Sembawang</li>
                             </ul>
+                            <p class="text-muted small">Need service in other areas? <a href="{{ url_for('contact') }}" class="text-decoration-none">Contact us</a> to check availability.</p>
                         </div>
                         
                         <div class="d-grid gap-2">
@@ -62,11 +65,11 @@
             <div class="col-lg-6">
                 <div class="card h-100">
                     <div class="card-header bg-success text-white">
-                        <h3 class="card-title h4 mb-0"><i class="bi bi-telephone-fill me-2"></i>Contact Information</h3>
+                        <p class="h4 mb-0"><i class="bi bi-telephone-fill me-2"></i>Contact Information</p>
                     </div>
                     <div class="card-body">
                         <div class="mb-4">
-                            <h5 class="h6 fw-bold">Phone & WhatsApp</h5>
+                            <p class="fw-bold">Phone & WhatsApp</p>
                             <p class="mb-2">
                                 <i class="bi bi-telephone me-2"></i>
                                 <a href="tel:+65-XXXX-XXXX" class="text-decoration-none">+65-XXXX-XXXX</a>
@@ -78,15 +81,32 @@
                         </div>
                         
                         <div class="mb-4">
-                            <h5 class="h6 fw-bold">Email</h5>
+                            <p class="fw-bold">Email</p>
                             <p class="mb-3">
                                 <i class="bi bi-envelope me-2"></i>
                                 <a href="mailto:hello@TopTailgroomer.com" class="text-decoration-none">hello@TopTailgroomer.com</a>
                             </p>
                         </div>
                         
+                        <!-- Social Media Section -->
                         <div class="mb-4">
-                            <h5 class="h6 fw-bold">Business Hours</h5>
+                            <p class="fw-bold">Follow Us on Social Media</p>
+                            <div class="d-flex gap-2 mb-3">
+                                <a href="https://www.instagram.com/nyp_infosec/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-danger btn-sm">
+                                    <i class="bi bi-instagram me-1"></i>Instagram
+                                </a>
+                                <a href="https://www.facebook.com/nanyangpoly" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm">
+                                    <i class="bi bi-facebook me-1"></i>Facebook
+                                </a>
+                                <a href="https://www.tiktok.com/@nanyangpoly" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark btn-sm">
+                                    <i class="bi bi-tiktok me-1"></i>TikTok
+                                </a>
+                            </div>
+                            <p class="text-muted small">See our latest grooming work and happy pets! <a href="{{ url_for('home') }}" class="text-decoration-none">Visit our homepage</a> for more updates.</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <p class="fw-bold">Business Hours</p>
                             <ul class="list-unstyled">
                                 <li><i class="bi bi-clock me-2"></i>Monday - Friday: 9:00 AM - 7:00 PM</li>
                                 <li><i class="bi bi-clock me-2"></i>Saturday: 9:00 AM - 6:00 PM</li>
@@ -95,7 +115,7 @@
                         </div>
                         
                         <div class="mb-3">
-                            <h5 class="h6 fw-bold">Emergency Services</h5>
+                            <p class="fw-bold">Emergency Services</p>
                             <p class="text-muted mb-0">24/7 emergency grooming available for urgent cases</p>
                         </div>
                     </div>
@@ -119,8 +139,8 @@
                     <div class="mb-3">
                         <span class="badge bg-primary rounded-circle p-3" style="font-size: 1.5rem;">1</span>
                     </div>
-                    <h3 class="h5 fw-bold mb-3">Choose Your Service</h3>
-                    <p class="mb-3">Select from cat grooming, dog grooming, nail clipping, dematting, or mobile services</p>
+                    <p class="h5 fw-bold mb-3">Choose Your Service</p>
+                    <p class="mb-3">Select from cat grooming, dog grooming, nail clipping, dematting, or mobile services. <a href="{{ url_for('services') }}" class="text-decoration-none">Explore all our services</a> to find the perfect option for your pet.</p>
                     <a href="{{ url_for('services') }}" class="btn btn-outline-primary btn-sm">View Services</a>
                 </div>
             </div>
@@ -130,8 +150,8 @@
                     <div class="mb-3">
                         <span class="badge bg-success rounded-circle p-3" style="font-size: 1.5rem;">2</span>
                     </div>
-                    <h3 class="h5 fw-bold mb-3">Contact Us</h3>
-                    <p class="mb-3">Call, WhatsApp, or email us with your preferred date and time</p>
+                    <p class="h5 fw-bold mb-3">Contact Us</p>
+                    <p class="mb-3">Call, WhatsApp, or email us with your preferred date and time. You can also <a href="{{ url_for('home') }}" class="text-decoration-none">learn more about our approach</a> before booking.</p>
                     <a href="tel:+65-XXXX-XXXX" class="btn btn-outline-success btn-sm">Call Now</a>
                 </div>
             </div>
@@ -141,8 +161,8 @@
                     <div class="mb-3">
                         <span class="badge bg-warning rounded-circle p-3" style="font-size: 1.5rem;">3</span>
                     </div>
-                    <h3 class="h5 fw-bold mb-3">Confirm Details</h3>
-                    <p class="mb-3">We'll confirm your appointment and provide service details</p>
+                    <p class="h5 fw-bold mb-3">Confirm Details</p>
+                    <p class="mb-3">We'll confirm your appointment and provide service details. Need help choosing? <a href="{{ url_for('services') }}" class="text-decoration-none">Check our service guide</a> for recommendations.</p>
                     <small class="text-muted">Usually within 2 hours</small>
                 </div>
             </div>
@@ -152,8 +172,8 @@
                     <div class="mb-3">
                         <span class="badge bg-info rounded-circle p-3" style="font-size: 1.5rem;">4</span>
                     </div>
-                    <h3 class="h5 fw-bold mb-3">Enjoy the Service</h3>
-                    <p class="mb-3">Our professional groomers will take excellent care of your pet</p>
+                    <p class="h5 fw-bold mb-3">Enjoy the Service</p>
+                    <p class="mb-3">Our professional groomers will take excellent care of your pet. After service, <a href="{{ url_for('home') }}" class="text-decoration-none">visit our homepage</a> to leave a review or book your next appointment.</p>
                     <small class="text-muted">Mobile service available</small>
                 </div>
             </div>
@@ -175,32 +195,32 @@
                     <div class="col-md-6">
                         <div class="card border-0 bg-light">
                             <div class="card-body text-center">
-                                <h4 class="h5 fw-bold text-primary">West Singapore</h4>
-                                <p class="mb-0">Jurong West, Jurong East, Choa Chu Kang, Bukit Batok, Clementi, Bukit Panjang</p>
+                                <p class="fw-bold text-primary">West Singapore</p>
+                                <p class="mb-0">Jurong West, Jurong East, Choa Chu Kang, Bukit Batok, Clementi, Bukit Panjang - <a href="{{ url_for('services') }}" class="text-decoration-none">Book mobile service</a></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="card border-0 bg-light">
                             <div class="card-body text-center">
-                                <h4 class="h5 fw-bold text-primary">North Singapore</h4>
-                                <p class="mb-0">Ang Mo Kio, Yishun, Woodlands, Sembawang, Admiralty, Marsiling</p>
+                                <p class="fw-bold text-primary">North Singapore</p>
+                                <p class="mb-0">Ang Mo Kio, Yishun, Woodlands, Sembawang, Admiralty, Marsiling - <a href="{{ url_for('contact') }}" class="text-decoration-none">Schedule appointment</a></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="card border-0 bg-light">
                             <div class="card-body text-center">
-                                <h4 class="h5 fw-bold text-primary">Central Singapore</h4>
-                                <p class="mb-0">Bishan, Toa Payoh, Novena, Thomson, Balestier, Serangoon</p>
+                                <p class="fw-bold text-primary">Central Singapore</p>
+                                <p class="mb-0">Bishan, Toa Payoh, Novena, Thomson, Balestier, Serangoon - <a href="{{ url_for('home') }}" class="text-decoration-none">Learn more</a></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="card border-0 bg-light">
                             <div class="card-body text-center">
-                                <h4 class="h5 fw-bold text-primary">Northeast Singapore</h4>
-                                <p class="mb-0">Punggol, Sengkang, Hougang, Pasir Ris (with travel fee)</p>
+                                <p class="fw-bold text-primary">Northeast Singapore</p>
+                                <p class="mb-0">Punggol, Sengkang, Hougang, Pasir Ris (with travel fee) - <a href="{{ url_for('contact') }}" class="text-decoration-none">Contact for pricing</a></p>
                             </div>
                         </div>
                     </div>
@@ -209,7 +229,7 @@
                 <div class="text-center mt-4">
                     <p class="text-muted">
                         <i class="bi bi-info-circle me-2"></i>
-                        Mobile services available island-wide. Additional travel fees may apply for locations beyond 15km from our base.
+                        Mobile services available island-wide. Additional travel fees may apply for locations beyond 15km from our base. <a href="{{ url_for('services') }}" class="text-decoration-none">View mobile service details</a> or <a href="{{ url_for('home') }}" class="text-decoration-none">explore all our offerings</a>.
                     </p>
                 </div>
             </div>
@@ -290,7 +310,7 @@
                                     <i class="bi bi-calendar-check me-2"></i>Submit Booking Request
                                 </button>
                                 <p class="small text-muted mt-3 mb-0">
-                                    We'll contact you within 2 hours to confirm your appointment
+                                    We'll contact you within 2 hours to confirm your appointment. Questions? <a href="{{ url_for('home') }}" class="text-decoration-none">Visit our homepage</a> or <a href="{{ url_for('services') }}" class="text-decoration-none">view our services</a>.
                                 </p>
                             </div>
                         </form>
@@ -313,54 +333,143 @@
             <div class="col-lg-10">
                 <div class="accordion" id="faqAccordion">
                     <div class="accordion-item">
-                        <h3 class="accordion-header" id="faq1">
+                        <p class="accordion-header" id="faq1">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
                                 Do you provide mobile pet grooming services near me?
                             </button>
-                        </h3>
+                        </p>
                         <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                Yes! We provide mobile pet grooming services throughout Singapore, with our base at Nanyang Polytechnic. We serve Jurong West, Choa Chu Kang, Ang Mo Kio, and surrounding areas with our fully equipped mobile grooming unit.
+                                Yes! We provide mobile pet grooming services throughout Singapore, with our base at Nanyang Polytechnic. We serve Jurong West, Choa Chu Kang, Ang Mo Kio, and surrounding areas with our fully equipped mobile grooming unit. <a href="{{ url_for('services') }}" class="text-decoration-none">Learn more about our mobile services</a>.
                             </div>
                         </div>
                     </div>
                     
                     <div class="accordion-item">
-                        <h3 class="accordion-header" id="faq2">
+                        <p class="accordion-header" id="faq2">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
                                 How far in advance should I book?
                             </button>
-                        </h3>
+                        </p>
                         <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                We recommend booking at least 3-5 days in advance, especially for weekend appointments. However, we do accommodate same-day bookings subject to availability. For mobile services, we prefer 1 week advance notice.
+                                We recommend booking at least 3-5 days in advance, especially for weekend appointments. However, we do accommodate same-day bookings subject to availability. For mobile services, we prefer 1 week advance notice. <a href="{{ url_for('contact') }}" class="text-decoration-none">Contact us</a> to check availability.
                             </div>
                         </div>
                     </div>
                     
                     <div class="accordion-item">
-                        <h3 class="accordion-header" id="faq3">
+                        <p class="accordion-header" id="faq3">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
                                 What areas do you cover for mobile grooming?
                             </button>
-                        </h3>
+                        </p>
                         <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                Our primary service area includes West and North Singapore: Jurong West, Jurong East, Choa Chu Kang, Bukit Batok, Bukit Panjang, Ang Mo Kio, Yishun, and Woodlands. We also serve Central and East Singapore with additional travel fees.
+                                Our primary service area includes West and North Singapore: Jurong West, Jurong East, Choa Chu Kang, Bukit Batok, Bukit Panjang, Ang Mo Kio, Yishun, and Woodlands. We also serve Central and East Singapore with additional travel fees. <a href="{{ url_for('home') }}" class="text-decoration-none">Visit our homepage</a> for complete coverage details.
                             </div>
                         </div>
                     </div>
                     
                     <div class="accordion-item">
-                        <h3 class="accordion-header" id="faq4">
+                        <p class="accordion-header" id="faq4">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
                                 Do you groom both cats and dogs?
                             </button>
-                        </h3>
+                        </p>
                         <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                Absolutely! We specialize in both cat and dog grooming services. Our groomers are trained in handling both species and understand their different needs and temperaments. We also offer combination packages for multi-pet households.
+                                Absolutely! We specialize in both cat and dog grooming services. Our groomers are trained in handling both species and understand their different needs and temperaments. We also offer combination packages for multi-pet households. <a href="{{ url_for('services') }}" class="text-decoration-none">Explore our complete service offerings</a>.
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Social Media Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold">Follow Us for Daily Pet Grooming Tips</h2>
+            <p class="lead">Stay connected with Top Tail Groomers on social media for grooming tips, before/after photos, and special offers</p>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="row g-4">
+                    <!-- Instagram Widget -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <i class="bi bi-instagram" style="font-size: 3rem; color: #E4405F;"></i>
+                                </div>
+                                <p class="fw-bold">Instagram</p>
+                                <p class="text-muted mb-3">See our latest grooming transformations and happy pets! Follow @TopTailGroomers for daily inspiration.</p>
+                                <a href="https://www.instagram.com/nyp_infosec/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-danger">
+                                    <i class="bi bi-instagram me-2"></i>Follow on Instagram
+                                </a>
+                                <p class="text-muted small mt-2">Share your photos with #TopTailGroomed</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Facebook Widget -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <i class="bi bi-facebook" style="font-size: 3rem; color: #1877F2;"></i>
+                                </div>
+                                <p class="fw-bold">Facebook</p>
+                                <p class="text-muted mb-3">Join our community for grooming tips, pet care advice, and exclusive promotions for Singapore pet owners.</p>
+                                <a href="https://www.facebook.com/nanyangpoly" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">
+                                    <i class="bi bi-facebook me-2"></i>Like Our Page
+                                </a>
+                                <p class="text-muted small mt-2">Get weekly grooming tips and offers</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- TikTok Widget -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <i class="bi bi-tiktok" style="font-size: 3rem; color: #000000;"></i>
+                                </div>
+                                <p class="fw-bold">TikTok</p>
+                                <p class="text-muted mb-3">Watch fun grooming videos, quick pet care tips, and behind-the-scenes content from our Singapore salon.</p>
+                                <a href="https://www.tiktok.com/@nanyangpoly" target="_blank" rel="noopener noreferrer" class="btn btn-outline-dark">
+                                    <i class="bi bi-tiktok me-2"></i>Follow on TikTok
+                                </a>
+                                <p class="text-muted small mt-2">Tag us in your pet videos!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social Media Call to Action -->
+                <div class="text-center mt-5">
+                    <div class="bg-light p-4 rounded">
+                        <p class="fw-bold mb-2">🌟 Share Your Pet's Transformation!</p>
+                        <p class="mb-3">Tag us in your before/after photos and get featured on our social media. Plus, get a 10% discount on your next grooming session! <a href="{{ url_for('services') }}" class="text-decoration-none">Book your next appointment</a> and share the love.</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="https://www.instagram.com/nyp_infosec/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-danger">
+                                <i class="bi bi-instagram me-1"></i>Instagram
+                            </a>
+                            <a href="https://www.facebook.com/nanyangpoly" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary">
+                                <i class="bi bi-facebook me-1"></i>Facebook
+                            </a>
+                            <a href="https://www.tiktok.com/@nanyangpoly" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-dark">
+                                <i class="bi bi-tiktok me-1"></i>TikTok
+                            </a>
+                            <a href="{{ url_for('home') }}" class="btn btn-sm btn-primary">
+                                <i class="bi bi-house me-1"></i>Visit Homepage
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -373,7 +482,7 @@
 <section class="py-5 text-white" style="background: linear-gradient(135deg, #28a745 0%, #20c997 100%); width: 100vw; margin-left: calc(-50vw + 50%);">
     <div class="container text-center">
         <h2 class="display-5 fw-bold mb-4">Ready to Book Pet Grooming Near You?</h2>
-        <p class="lead mb-4">Contact Top Tail Groomers at Nanyang Polytechnic Singapore today!</p>
+        <p class="lead mb-4">Contact Top Tail Groomers at Nanyang Polytechnic Singapore today! <a href="{{ url_for('services') }}" class="text-white text-decoration-underline">Browse our services</a> or <a href="{{ url_for('home') }}" class="text-white text-decoration-underline">learn more about us</a>.</p>
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <a href="tel:+65-XXXX-XXXX" class="btn btn-light btn-lg me-3 mb-2">
