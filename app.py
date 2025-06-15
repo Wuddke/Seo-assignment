@@ -3,13 +3,14 @@ from flask import Flask, render_template, request, redirect, url_for, send_from_
 app = Flask(__name__)
 
 # Handle www redirect for SEO
-@app.before_request
-def redirect_nonwww():
-    """Redirect non-www to www or vice versa for SEO consistency"""
-    if request.url.startswith('http://') and not request.url.startswith('http://www.'):
-        # Redirect http://domain.com to http://www.domain.com
-        url = request.url.replace('http://', 'http://www.', 1)
-        return redirect(url, code=301)
+#
+#@app.before_request
+#def redirect_nonwww():
+#    """Redirect non-www to www or vice versa for SEO consistency"""
+#    if request.url.startswith('http://') and not request.url.startswith('http://www.'):
+#        # Redirect http://domain.com to http://www.domain.com
+#        url = request.url.replace('http://', 'http://www.', 1)
+#        return redirect(url, code=301)
 
 @app.route("/")
 def home():

@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">    <head>
+<html lang="en">
+    <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="{% block meta_description %}Top Tail Groomers - Professional pet grooming services in Singapore. Expert dog grooming, cat grooming, mobile pet grooming, nail clipping and dematting services.{% endblock %}">
         <meta name="keywords" content="dog groomer, cat groomer, pet grooming near me, mobile pet grooming, dog nail clipping, cat nail clipping, dematting, pet grooming ang mo kio, dog grooming singapore, cat grooming singapore">
         <meta name="author" content="Top Tail Groomers">
         <meta name="robots" content="index, follow">
-        <meta name="language" content="en">        <meta property="og:title" content="{% block og_title %}{% block title %}{% endblock %}{% endblock %}">
+        <meta name="language" content="en">
+        <meta property="og:title" content="{% block og_title %}Top Tail Groomers - Professional Pet Grooming Services{% endblock %}">
         <meta property="og:description" content="{% block og_description %}Top Tail Groomers - Professional pet grooming services in Singapore. Expert dog grooming, cat grooming, mobile pet grooming, nail clipping and dematting services.{% endblock %}">
         <meta property="og:type" content="website">
         <meta property="og:url" content="{{ request.url }}">
         <meta property="og:site_name" content="Top Tail Groomers">
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="{% block twitter_title %}{% block title %}{% endblock %}{% endblock %}">
-        <meta name="twitter:description" content="{% block twitter_description %}Top Tail Groomers - Professional pet grooming services in Singapore. Expert dog grooming, cat grooming, mobile pet grooming, nail clipping and dematting services.{% endblock %}">>
+        <meta name="twitter:title" content="{% block twitter_title %}Top Tail Groomers - Professional Pet Grooming Services{% endblock %}">
+        <meta name="twitter:description" content="{% block twitter_description %}Top Tail Groomers - Professional pet grooming services in Singapore. Expert dog grooming, cat grooming, mobile pet grooming, nail clipping and dematting services.{% endblock %}">
         <link rel="canonical" href="{{ request.url }}">
         <link rel="icon" type="image/png" href="{{ url_for('static', filename='Images/logo.png') }}">
         <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='Images/logo.png') }}">
