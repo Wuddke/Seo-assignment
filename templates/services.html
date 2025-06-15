@@ -2,7 +2,7 @@
 
 {% block title %}Dog Cat Grooming Services Singapore | Mobile Pet Grooming{% endblock %}
 
-{% block meta_description %}Professional dog grooming and cat grooming services in Singapore. Expert mobile pet grooming, nail clipping, dematting, and comprehensive pet care solutions. Book today for premium grooming services.{% endblock %}
+{% block meta_description %}Dog grooming and cat grooming services in Singapore. mobile pet grooming, nail clipping, dematting, and comprehensive pet care.{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
@@ -48,15 +48,14 @@
 <!-- Detailed Services Grid -->
 <section class="py-5 bg-light">
     <div class="container">
-        <h2 class="text-center display-6 fw-bold mb-5">Complete Grooming Solutions</h2>
-        <div class="row g-4">
+        <h2 class="text-center display-6 fw-bold mb-5">Complete Grooming Solutions</h2>        <div class="row g-4">
             <!-- Cat Grooming -->
             <div class="col-lg-6">
                 <div class="card h-100 shadow-sm">
                     <img src="{{ url_for('static', filename='Images/happy-cat-owner-holding-groomed-orange-cat.JPG') }}" alt="Professional cat grooming service showing well-groomed orange cat" class="card-img-top" style="height: 250px; object-fit: cover;">
                     <div class="card-body">
-                        <h3 class="card-title h4 text-primary">Professional Cat Grooming</h3>
-                        <p class="card-text mb-3">Specialized cat grooming services designed for feline comfort and safety. Our experienced cat groomers understand feline behavior and provide gentle, stress-free grooming.</p>
+                        <p class="h5 text-primary fw-bold mb-3">Professional Cat Grooming</p>
+                        <p class="card-text mb-3">Specialized cat grooming services designed for feline comfort and safety. Our experienced cat groomers understand feline behavior and provide gentle, stress-free grooming. <a href="{{ url_for('home') }}" class="text-decoration-none">Learn more about our approach</a> to professional pet care.</p>
                         <ul class="list-unstyled mb-3">
                             <li><i class="bi bi-check text-success me-2"></i>Full cat wash and dry</li>
                             <li><i class="bi bi-check text-success me-2"></i>Cat fur trimming and styling</li>
@@ -73,8 +72,8 @@
                 <div class="card h-100 shadow-sm">
                     <img src="{{ url_for('static', filename='Images/Cute-Well-groomed-golden-retriever-dog-breed.png') }}" alt="Professional dog grooming service showing well-groomed golden retriever" class="card-img-top" style="height: 250px; object-fit: cover;">
                     <div class="card-body">
-                        <h3 class="card-title h4 text-primary">Complete Dog Grooming</h3>
-                        <p class="card-text mb-3">Comprehensive dog grooming services for all breeds and sizes. From basic baths to full styling, our dog groomers provide professional care tailored to your pet's needs.</p>
+                        <p class="h5 text-primary fw-bold mb-3">Complete Dog Grooming</p>
+                        <p class="card-text mb-3">Comprehensive dog grooming services for all breeds and sizes. From basic baths to full styling, our dog groomers provide professional care tailored to your pet's needs. <a href="{{ url_for('contact') }}" class="text-decoration-none">Book an appointment</a> for personalized service.</p>
                         <ul class="list-unstyled mb-3">
                             <li><i class="bi bi-check text-success me-2"></i>Full dog wash and conditioning</li>
                             <li><i class="bi bi-check text-success me-2"></i>Professional hair cutting and styling</li>
@@ -91,8 +90,8 @@
                 <div class="card h-100 shadow-sm">
                     <img src="{{ url_for('static', filename='Images/Pet-Groomer-trimming-pet-nails-like-a-pro.png') }}" alt="Professional pet nail clipping service for dogs and cats" class="card-img-top" style="height: 250px; object-fit: cover;">
                     <div class="card-body">
-                        <h3 class="card-title h4 text-primary">Dog & Cat Nail Clipping</h3>
-                        <p class="card-text mb-3">Professional nail trimming services for both dogs and cats. Our experienced groomers ensure safe and comfortable nail clipping to maintain your pet's health and prevent scratching.</p>
+                        <p class="h5 text-primary fw-bold mb-3">Dog & Cat Nail Clipping</p>
+                        <p class="card-text mb-3">Professional nail trimming services for both dogs and cats. Our experienced groomers ensure safe and comfortable nail clipping to maintain your pet's health and prevent scratching. <a href="{{ url_for('home') }}" class="text-decoration-none">Discover our full range</a> of grooming services.</p>
                         <ul class="list-unstyled mb-3">
                             <li><i class="bi bi-check text-success me-2"></i>Safe nail trimming technique</li>
                             <li><i class="bi bi-check text-success me-2"></i>Quick and stress-free process</li>
@@ -109,8 +108,8 @@
                 <div class="card h-100 shadow-sm">
                     <img src="{{ url_for('static', filename='Images/Happy-customer-with-their-freshly-groomed-poodle.png') }}" alt="Cat and dog grooming services combined package" class="card-img-top" style="height: 250px; object-fit: cover;">
                     <div class="card-body">
-                        <h3 class="card-title h4 text-primary">Cat/Dog Grooming Packages</h3>
-                        <p class="card-text mb-3">Convenient grooming packages for multi-pet households. Save time and money with our combined cat and dog grooming services performed during the same visit.</p>
+                        <p class="h5 text-primary fw-bold mb-3">Cat/Dog Grooming Packages</p>
+                        <p class="card-text mb-3">Convenient grooming packages for multi-pet households. Save time and money with our combined cat and dog grooming services performed during the same visit. <a href="{{ url_for('contact') }}" class="text-decoration-none">Contact us</a> for custom package pricing.</p>
                         <ul class="list-unstyled mb-3">
                             <li><i class="bi bi-check text-success me-2"></i>Multi-pet household discounts</li>
                             <li><i class="bi bi-check text-success me-2"></i>Same-day service for all pets</li>
@@ -135,9 +134,8 @@
                 <div class="text-center p-4 border rounded shadow-sm h-100">
                     <div class="mb-3">
                         <i class="bi bi-scissors" style="font-size: 3rem; color: #007bff;"></i>
-                    </div>
-                    <h3 class="h4 fw-bold mb-3">Professional Dematting</h3>
-                    <p class="mb-3">Expert dematting services for severely matted fur. Our gentle techniques safely remove mats without causing discomfort to your pet.</p>
+                    </div>                    <p class="h5 text-primary fw-bold mb-3">Professional Dematting</p>
+                    <p class="mb-3">Expert dematting services for severely matted fur. Our gentle techniques safely remove mats without causing discomfort to your pet. Perfect for long-haired breeds and rescue animals requiring extra care. <a href="{{ url_for('home') }}" class="text-decoration-none">Discover our complete pet care approach</a> that prioritizes comfort and health.</p>
                     <ul class="list-unstyled text-start">
                         <li><i class="bi bi-check text-success me-2"></i>Safe mat removal techniques</li>
                         <li><i class="bi bi-check text-success me-2"></i>Prevents skin irritation</li>
@@ -152,9 +150,8 @@
                 <div class="text-center p-4 border rounded shadow-sm h-100">
                     <div class="mb-3">
                         <i class="bi bi-truck" style="font-size: 3rem; color: #007bff;"></i>
-                    </div>
-                    <h3 class="h4 fw-bold mb-3">Mobile Dog Grooming</h3>
-                    <p class="mb-3">Professional dog grooming services that come to your location. Perfect for busy pet owners and anxious dogs who prefer familiar surroundings.</p>
+                    </div>                    <p class="h5 text-primary fw-bold mb-3">Mobile Dog Grooming</p>
+                    <p class="mb-3">Professional dog grooming services that come to your location. Perfect for busy pet owners and anxious dogs who prefer familiar surroundings. <a href="{{ url_for('contact') }}" class="text-decoration-none">Schedule your mobile service</a> for convenience and <a href="{{ url_for('home') }}" class="text-decoration-none">explore our comprehensive services</a>.</p>
                     <ul class="list-unstyled text-start">
                         <li><i class="bi bi-check text-success me-2"></i>Island-wide Singapore coverage</li>
                         <li><i class="bi bi-check text-success me-2"></i>Fully equipped mobile unit</li>
@@ -169,9 +166,8 @@
                 <div class="text-center p-4 border rounded shadow-sm h-100">
                     <div class="mb-3">
                         <i class="bi bi-house-door" style="font-size: 3rem; color: #007bff;"></i>
-                    </div>
-                    <h3 class="h4 fw-bold mb-3">Mobile Cat Grooming</h3>
-                    <p class="mb-3">Specialized mobile cat grooming services. Reduce stress for your feline friend with professional grooming in their comfortable home environment.</p>
+                    </div>                    <p class="h5 text-primary fw-bold mb-3">Mobile Cat Grooming</p>
+                    <p class="mb-3">Specialized mobile cat grooming services. Reduce stress for your feline friend with professional grooming in their comfortable home environment. <a href="{{ url_for('home') }}" class="text-decoration-none">Learn about our gentle approach</a> to feline care and <a href="{{ url_for('contact') }}" class="text-decoration-none">book your appointment today</a>.</p>
                     <ul class="list-unstyled text-start">
                         <li><i class="bi bi-check text-success me-2"></i>Stress-free environment</li>
                         <li><i class="bi bi-check text-success me-2"></i>Cat behavior specialists</li>
@@ -201,19 +197,18 @@
                             Professional dog cat grooming services in Singapore are essential for maintaining your pet's health, hygiene, and overall well-being. Our comprehensive grooming approach ensures that both dogs and cats receive specialized care tailored to their specific needs. Whether you're looking for mobile pet grooming convenience or in-salon services, our experienced team delivers exceptional results every time.
                         </p>
                         
-                        <h4 class="h4 fw-bold mb-3">Benefits of Regular Dog Grooming</h4>
-                        <p class="mb-4">
-                            Regular dog grooming in Singapore goes beyond aesthetics. It plays a crucial role in preventing skin conditions, reducing shedding, and maintaining proper hygiene. Our professional dog groomers are trained to identify potential health issues early, from skin allergies to ear infections. Mobile dog grooming services make it even more convenient for busy pet owners who want the best care for their furry companions without the stress of travel.
+                        <h4 class="h4 fw-bold mb-3">Benefits of Regular Dog Grooming</h4>                        <p class="mb-4">
+                            Regular dog grooming in Singapore goes beyond aesthetics. It plays a crucial role in preventing skin conditions, reducing shedding, and maintaining proper hygiene. Our professional dog groomers are trained to identify potential health issues early, from skin allergies to ear infections. Mobile dog grooming services make it even more convenient for busy pet owners who want the best care for their furry companions without the stress of travel. <a href="{{ url_for('contact') }}" class="text-decoration-none">Contact us to schedule</a> your pet's next grooming appointment.
                         </p>
                         
-                        <h4 class="h4 fw-bold mb-3">Cat Grooming Expertise</h4>
+                        <p class="fw-bold mb-3 text-primary">Cat Grooming Expertise</p>
                         <p class="mb-4">
-                            Cat grooming requires specialized knowledge and gentle handling techniques. Our cat grooming services in Singapore are designed specifically for feline behavior and comfort. From long-haired Persian cats requiring regular dematting to short-haired breeds needing basic maintenance, we provide comprehensive cat grooming that includes nail trimming, ear cleaning, and stress-free bathing when necessary.
+                            Cat grooming requires specialized knowledge and gentle handling techniques. Our cat grooming services in Singapore are designed specifically for feline behavior and comfort. From long-haired Persian cats requiring regular dematting to short-haired breeds needing basic maintenance, we provide comprehensive cat grooming that includes nail trimming, ear cleaning, and stress-free bathing when necessary. <a href="{{ url_for('home') }}" class="text-decoration-none">Learn more about our gentle feline care</a> approach.
                         </p>
                         
-                        <h4 class="h4 fw-bold mb-3">Mobile Pet Grooming Revolution</h4>
+                        <p class="fw-bold mb-3 text-primary">Mobile Pet Grooming Revolution</p>
                         <p class="mb-4">
-                            Mobile pet grooming services have revolutionized pet care in Singapore. Our mobile grooming units bring professional-grade equipment and experienced groomers directly to your doorstep. This service is particularly beneficial for anxious pets, elderly animals, or busy pet owners who prefer the convenience of at-home grooming. Mobile services include everything from basic baths to full grooming packages, nail clipping, and specialized treatments.
+                            Mobile pet grooming services have revolutionized pet care in Singapore. Our mobile grooming units bring professional-grade equipment and experienced groomers directly to your doorstep. This service is particularly beneficial for anxious pets, elderly animals, or busy pet owners who prefer the convenience of at-home grooming. Mobile services include everything from basic baths to full grooming packages, nail clipping, and specialized treatments. <a href="{{ url_for('contact') }}" class="text-decoration-none">Book your mobile grooming service</a> today for ultimate convenience.
                         </p>
                         
                         <div class="text-center mt-4">
@@ -226,31 +221,25 @@
                 </div>
             </div>
             
-            <div class="col-lg-4">
-                <div class="card h-100">
+            <div class="col-lg-4">                <div class="card h-100">
                     <div class="card-header bg-primary text-white">
-                        <h4 class="h5 mb-0">Grooming Process</h4>
-                    </div>
-                    <div class="card-body">
-                        <div class="mb-4">
-                            <h5 class="h6 fw-bold">Pre-Grooming Assessment</h5>
-                            <p class="small mb-3">Every dog and cat receives a thorough health and temperament assessment before grooming begins. This ensures we choose the right approach for each individual pet.</p>
-                        </div>
+                        <p class="h5 mb-0">Our Professional Grooming Process</p>
+                    </div>                    <div class="card-body">
+                        <p class="mb-4">
+                            <strong>Pre-Grooming Assessment:</strong> Every dog and cat receives a thorough health and temperament assessment before grooming begins. This ensures we choose the right approach for each individual pet. Our experienced team evaluates coat condition, skin health, and behavioral needs to customize the perfect grooming experience. <a href="{{ url_for('home') }}" class="text-decoration-none">Discover our comprehensive approach</a> to pet care.
+                        </p>
                         
-                        <div class="mb-4">
-                            <h5 class="h6 fw-bold">Customized Service Plan</h5>
-                            <p class="small mb-3">Based on breed, coat type, and specific needs, we create a personalized grooming plan that may include washing, cutting, nail clipping, and specialized treatments.</p>
-                        </div>
+                        <p class="mb-4">
+                            <strong>Customized Service Plan:</strong> Based on breed, coat type, and specific needs, we create a personalized grooming plan that may include washing, cutting, nail clipping, and specialized treatments. <a href="{{ url_for('contact') }}" class="text-decoration-none">Contact our team</a> to discuss your pet's unique requirements and pricing options.
+                        </p>
                         
-                        <div class="mb-4">
-                            <h5 class="h6 fw-bold">Professional Execution</h5>
-                            <p class="small mb-3">Our certified groomers use professional-grade tools and techniques to ensure safe, comfortable, and effective grooming for both mobile and in-salon services.</p>
-                        </div>
+                        <p class="mb-4">
+                            <strong>Professional Execution:</strong> Our certified groomers use professional-grade tools and techniques to ensure safe, comfortable, and effective grooming for both mobile and in-salon services. We maintain the highest standards of hygiene and safety throughout the process, ensuring your pet receives the best possible care.
+                        </p>
                         
-                        <div class="mb-3">
-                            <h5 class="h6 fw-bold">Post-Grooming Care</h5>
-                            <p class="small mb-0">After grooming, we provide care instructions and schedule follow-up appointments to maintain your pet's health and appearance.</p>
-                        </div>
+                        <p class="mb-0">
+                            <strong>Post-Grooming Care:</strong> After grooming, we provide detailed care instructions and can schedule follow-up appointments to maintain your pet's health and appearance. <a href="{{ url_for('home') }}" class="text-decoration-none">Visit our homepage</a> to learn more about our comprehensive care approach and <a href="{{ url_for('contact') }}" class="text-decoration-none">schedule your next appointment</a>.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -265,22 +254,21 @@
             <h2 class="display-6 fw-bold">Advanced Grooming Techniques for Singapore Pets</h2>
             <p class="lead">State-of-the-art equipment and methods for superior results</p>
         </div>
-        
-        <div class="row g-4">
+          <div class="row g-4">
             <div class="col-md-6">
                 <div class="d-flex align-items-start mb-4">
                     <i class="bi bi-gear-fill text-primary me-3" style="font-size: 2rem;"></i>
                     <div>
-                        <h4 class="h5 fw-bold">Professional Equipment</h4>
-                        <p class="mb-0">Our mobile pet grooming units and salon facilities are equipped with professional-grade tools including hydraulic tables, high-velocity dryers, and specialized clippers designed for different coat types and breeds.</p>
+                        <p class="fw-bold text-primary mb-2">Professional Equipment</p>
+                        <p class="mb-0">Our mobile pet grooming units and salon facilities are equipped with professional-grade tools including hydraulic tables, high-velocity dryers, and specialized clippers designed for different coat types and breeds. <a href="{{ url_for('contact') }}" class="text-decoration-none">Learn more about our equipment</a> and service options.</p>
                     </div>
                 </div>
                 
                 <div class="d-flex align-items-start mb-4">
                     <i class="bi bi-heart-pulse-fill text-primary me-3" style="font-size: 2rem;"></i>
                     <div>
-                        <h4 class="h5 fw-bold">Health-Focused Approach</h4>
-                        <p class="mb-0">Beyond aesthetics, our dog cat grooming services prioritize health. We check for skin conditions, parasites, and other health concerns during every session, providing early detection that can save lives.</p>
+                        <p class="fw-bold text-primary mb-2">Health-Focused Approach</p>
+                        <p class="mb-0">Beyond aesthetics, our dog cat grooming services prioritize health. We check for skin conditions, parasites, and other health concerns during every session, providing early detection that can save lives. <a href="{{ url_for('home') }}" class="text-decoration-none">Discover our holistic pet care philosophy</a> and comprehensive services.</p>
                     </div>
                 </div>
             </div>
@@ -289,16 +277,16 @@
                 <div class="d-flex align-items-start mb-4">
                     <i class="bi bi-shield-check-fill text-primary me-3" style="font-size: 2rem;"></i>
                     <div>
-                        <h4 class="h5 fw-bold">Safety Protocols</h4>
-                        <p class="mb-0">All our grooming services follow strict safety protocols. From temperature-controlled washing to secure restraint systems, we ensure every pet feels safe and comfortable throughout the grooming process.</p>
+                        <p class="fw-bold text-primary mb-2">Safety Protocols</p>
+                        <p class="mb-0">All our grooming services follow strict safety protocols. From temperature-controlled washing to secure restraint systems, we ensure every pet feels safe and comfortable throughout the grooming process. <a href="{{ url_for('contact') }}" class="text-decoration-none">Contact us</a> to learn about our safety measures.</p>
                     </div>
                 </div>
                 
                 <div class="d-flex align-items-start mb-4">
                     <i class="bi bi-award-fill text-primary me-3" style="font-size: 2rem;"></i>
                     <div>
-                        <h4 class="h5 fw-bold">Certified Professionals</h4>
-                        <p class="mb-0">Our team consists of certified groomers with specialized training in both dog and cat behavior, ensuring stress-free experiences for pets during mobile grooming sessions and salon visits.</p>
+                        <p class="fw-bold text-primary mb-2">Certified Professionals</p>
+                        <p class="mb-0">Our team consists of certified groomers with specialized training in both dog and cat behavior, ensuring stress-free experiences for pets during mobile grooming sessions and salon visits. <a href="{{ url_for('home') }}" class="text-decoration-none">Meet our professional team</a> and learn about their qualifications.</p>
                     </div>
                 </div>
             </div>
@@ -312,23 +300,22 @@
         <div class="text-center mb-5">
             <h2 class="display-6 fw-bold">Service Areas in Singapore</h2>
             <p class="lead">We provide mobile pet grooming services across Singapore</p>
-        </div>
-        <div class="row text-center">
+        </div>        <div class="row text-center">
             <div class="col-md-6 mb-3">
-                <h4 class="h5 fw-bold">Central Singapore</h4>
-                <p>Orchard, Marina Bay, Raffles Place, Clarke Quay</p>
+                <p class="fw-bold text-primary">Central Singapore</p>
+                <p>Orchard, Marina Bay, Raffles Place, Clarke Quay - <a href="{{ url_for('contact') }}" class="text-decoration-none">Book mobile grooming service</a></p>
             </div>
             <div class="col-md-6 mb-3">
-                <h4 class="h5 fw-bold">East Singapore</h4>
-                <p>Bedok, Tampines, Pasir Ris, Changi</p>
+                <p class="fw-bold text-primary">East Singapore</p>
+                <p>Bedok, Tampines, Pasir Ris, Changi - <a href="{{ url_for('contact') }}" class="text-decoration-none">Schedule your appointment</a></p>
             </div>
             <div class="col-md-6 mb-3">
-                <h4 class="h5 fw-bold">West Singapore</h4>
-                <p>Jurong, Clementi, Bukit Batok, Choa Chu Kang</p>
+                <p class="fw-bold text-primary">West Singapore</p>
+                <p>Jurong, Clementi, Bukit Batok, Choa Chu Kang - <a href="{{ url_for('home') }}" class="text-decoration-none">Explore our services</a></p>
             </div>
             <div class="col-md-6 mb-3">
-                <h4 class="h5 fw-bold">North Singapore</h4>
-                <p>Woodlands, Yishun, Ang Mo Kio, Bishan</p>
+                <p class="fw-bold text-primary">North Singapore</p>
+                <p>Woodlands, Yishun, Ang Mo Kio, Bishan - <a href="{{ url_for('contact') }}" class="text-decoration-none">Contact us today</a></p>
             </div>
         </div>
     </div>
@@ -338,10 +325,10 @@
 <section class="py-5 text-white" style="background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); width: 100vw; margin-left: calc(-50vw + 50%);">
     <div class="container text-center">
         <h2 class="display-5 fw-bold mb-4">Ready to Book Your Pet Grooming Service?</h2>
-        <p class="lead mb-4">Contact us today to schedule professional cat grooming, dog grooming, or mobile pet grooming services</p>
-        <div class="row justify-content-center">
+        <p class="lead mb-4">Contact us today to schedule professional cat grooming, dog grooming, or mobile pet grooming services</p>        <div class="row justify-content-center">
             <div class="col-md-8">
                 <a href="{{ url_for('contact') }}" class="btn btn-warning btn-lg me-3 mb-2">Contact Us Now</a>
+                <a href="{{ url_for('home') }}" class="btn btn-light btn-lg mb-2">View All Services</a>
             </div>
         </div>
     </div>
